@@ -1,9 +1,9 @@
-@charset "utf-8" ;
+@charset "utf-8";
 
 /* 
 all
 */
-.all{
+.all {
     color: #FFF;
     width: 100%;
     height: auto;
@@ -16,10 +16,12 @@ a:link {
     color: #ffffff;
     text-decoration: none;
 }
-a:visited{
+
+a:visited {
     color: #ffffff;
     text-decoration: none;
 }
+
 a:hover {
     color: #000000;
     text-decoration: none;
@@ -29,7 +31,7 @@ a:hover {
 /* 
 hero 
 */
-#hero{
+#hero {
     margin: 0;
     padding: 0;
     position: relative;
@@ -37,7 +39,8 @@ hero
     width: 100vw;
     height: auto
 }
-.hero{
+
+.hero {
     width: 100vw;
     height: 50vh;
     margin: 0;
@@ -45,19 +48,21 @@ hero
     position: relative;
     overflow: hidden;
 }
-.hero > video {
+
+.hero>video {
     position: fixed;
     width: 100vw;
     height: auto;
     margin: 0;
 }
+
 /* .background-video{} */
 
 
 /* 
 header 
 */
-.header{
+.header {
     background-color: rgba(0, 0, 0, 0.5);
     border-radius: 100vh;
     width: 80vw;
@@ -69,29 +74,35 @@ header
     backdrop-filter: blur(10px);
     margin-bottom: 2vh;
 }
-.nav{
+
+.nav {
     display: flex;
     align-items: center;
 }
+
 /* .logo{} */
-.h-list{
+.h-list {
     list-style: none;
     display: flex;
     text-align: right;
     font-size: 0.8em;
     margin: 0 4vw 0 auto;
 }
-.h-works{
+
+.h-work {
     margin: auto 2vw auto 0;
 }
-/* .works-link{} */
-.h-about{
+
+/* .work-link{} */
+.h-about {
     margin: auto 2vw auto 0;
 }
+
 /* .about-link{} */
-.h-others{
+.h-others {
     margin: auto 2vw auto 0;
 }
+
 /* .other-link{} */
 
 
@@ -102,12 +113,12 @@ header
 
 
 /* 
-works 
+work 
 */
-.works{
+/* .work {
     position: sticky;
     background-clip: border-box;
-    background-color: rgba(0, 0, 0, 0.5); 
+    background-color: rgba(0, 0, 0, 0.5);
     backdrop-filter: blur(10px);
     border-radius: 4vw;
     width: 80vw;
@@ -118,24 +129,344 @@ works
     padding-bottom: 0;
 }
 
-.works-section{
+.work-section {
     display: flex;
     animation: fadeup 2s cubic-bezier(0.25, 1, 0.5, 1) forwards;
+} */
+
+/* 親要素（ご提示のスタイルをベースに調整） */
+/* --- 既存のカード基本スタイル --- */
+/* --- 既存のカード基本スタイル --- */
+#work-01 {
+    position: sticky;
+    background-clip: border-box;
+    background-color: rgba(0, 0, 0, 0.4);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 4vw;
+    width: 80vw;
+    height: 80vh;
+    top: 14vh;
+    margin: 0 auto 10vh;
+    overflow: hidden;
+    padding: 5vh 5vw;
+    box-sizing: border-box;
+    color: #ffffff;
+}
+
+.work-inner {
+    display: flex;
+    justify-content: space-between;
+    align-items: stretch;
+    height: 100%;
+    gap: 4vw;
+}
+
+.work-info {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    /* justify-content: space-between; */
+    overflow-y: auto;
+    padding-right: 1vw;
+}
+
+.work-num {
+    display: block;
+    font-family: 'Impact', 'Arial Black', sans-serif;
+    font-size: clamp(2.5rem, 4.5vw, 4.5rem);
+    line-height: 1;
+    letter-spacing: 0.02em;
+    margin-bottom: 1.5vh;
+}
+
+.work-title {
+    font-size: clamp(1.2rem, 1.8vw, 1.8rem);
+    font-weight: 700;
+    margin: 0 0 3vh 0;
+}
+
+.work-block {
+    margin-bottom: 2.2vh;
+}
+
+.work-block h3 {
+    font-family: 'Impact', 'Arial Black', sans-serif;
+    font-size: clamp(1.1rem, 1.4vw, 1.4rem);
+    letter-spacing: 0.03em;
+    margin: 0 0 0.6vh 0;
+}
+
+.work-block p {
+    font-size: clamp(0.85rem, 0.95vw, 1rem);
+    line-height: 1.65;
+    color: rgba(255, 255, 255, 0.9);
+    margin: 0;
+}
+
+.btn-view {
+    display: inline-block;
+    margin-top: 1vh;
+    padding: 0.8em 1.6em;
+    border: 1px solid rgba(255, 255, 255, 0.4);
+    border-radius: 50px;
+    color: #fff;
+    text-decoration: none;
+    font-size: 0.9rem;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.btn-view:hover {
+    background-color: #fff;
+    color: #000;
+}
+
+/* --- 右側プレビューエリア --- */
+.work-preview {
+    flex: 1.15;
+    height: 100%;
+    background-color: #111;
+    border-radius: 1vw;
+    overflow: hidden;
+    position: relative;
+}
+
+.preview-scroll {
+    width: 100%;
+    height: 100%;
+    overflow-y: auto;
+    overscroll-behavior: contain;
+}
+
+/* クリック可能な画像のカーソルとホバー演出 */
+.js-modal-trigger {
+    width: 100%;
+    height: auto;
+    display: block;
+    cursor: zoom-in;
+    transition: opacity 0.25s ease;
+}
+
+.js-modal-trigger:hover {
+    opacity: 0.9;
+}
+
+/* バナー複数枚用の2列グリッド */
+.banner-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 12px;
+    padding: 12px;
+    box-sizing: border-box;
+    align-content: start;
+}
+
+.banner-grid img {
+    border-radius: 6px;
+}
+
+/* 右下に小さく「クリックで拡大」のヒントを表示 */
+.zoom-hint {
+    position: absolute;
+    bottom: 12px;
+    right: 12px;
+    background: rgba(0, 0, 0, 0.7);
+    color: #fff;
+    font-size: 0.75rem;
+    padding: 4px 10px;
+    border-radius: 20px;
+    pointer-events: none;
+    opacity: 0.8;
+}
+
+.preview-scroll::-webkit-scrollbar {
+    width: 6px;
+}
+
+.preview-scroll::-webkit-scrollbar-track {
+    background: rgba(255, 255, 255, 0.05);
+}
+
+.preview-scroll::-webkit-scrollbar-thumb {
+    background: rgba(255, 255, 255, 0.3);
+    border-radius: 3px;
+}
+
+/* --- 拡大モーダル --- */
+.modal {
+    position: fixed;
+    inset: 0;
+    z-index: 9999;
+    background-color: rgba(0, 0, 0, 0.88);
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    /* 縦長LPでも上から見られるように上揃え */
+    overflow-y: auto;
+    padding: 6vh 4vw;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s ease, visibility 0.3s ease;
+    cursor: zoom-out;
+}
+
+.modal.is-open {
+    opacity: 1;
+    visibility: visible;
+}
+
+.modal-content {
+    max-width: 1000px;
+    /* PCでの最大表示幅 */
+    width: 100%;
+    margin: auto 0;
+    cursor: default;
+}
+
+.modal-content img {
+    width: 100%;
+    height: auto;
+    display: block;
+    border-radius: 8px;
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.5);
+}
+
+/* 閉じるボタン（右上に固定） */
+.modal-close {
+    position: fixed;
+    top: 24px;
+    right: 32px;
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    background: rgba(0, 0, 0, 0.6);
+    color: #fff;
+    font-size: 28px;
+    line-height: 1;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background-color 0.2s, transform 0.2s;
+    z-index: 10000;
+}
+
+.modal-close:hover {
+    background: #fff;
+    color: #000;
+    transform: scale(1.05);
 }
 
 @keyframes fadeup {
-    0% {opacity: 0;
-        transform: translateX(300px);}
+    0% {
+        opacity: 0;
+        transform: translateX(300px);
+    }
+
     80% {
         opacity: 1;
     }
+
     100% {
         opacity: 1;
         transform: translateX(0);
     }
 }
-/* .works-top{} */
-.works-headline{
+
+/* --- 2枚目専用：2×2グリッドのレイアウト --- */
+.banner-grid-2x2 {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    gap: 1.2vh 1.2vw;
+    padding: 1.5vh 1.5vw;
+    box-sizing: border-box;
+    height: 100%;
+    align-content: center;
+}
+
+.banner-grid-2x2 img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    /* 枠に合わせて綺麗にトリミング・収める */
+    border-radius: 8px;
+    cursor: zoom-in;
+    transition: transform 0.25s ease, opacity 0.25s ease;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+}
+
+.banner-grid-2x2 img:hover {
+    transform: scale(1.03);
+    opacity: 0.95;
+}
+
+#work-02,
+#work-03,
+#about {
+    position: sticky;
+    background-clip: border-box;
+    background-color: rgba(0, 0, 0, 0.65);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 4vw;
+    width: 80vw;
+    height: 80vh;
+    top: 14vh;
+    margin: 16vh auto 10vh;
+    overflow: hidden;
+    padding: 5vh 5vw;
+    box-sizing: border-box;
+    color: #ffffff;
+
+
+    /* position: sticky;
+    background-color: rgba(0, 0, 0, 0.5);
+    backdrop-filter: blur(10px);
+    background-clip: border-box;
+    border-radius: 4vw;
+    width: 80vw;
+    height: 80vh;
+    top: 14vh;
+    left: 10vw;
+    margin-top: 16vh;
+    overflow: hidden; */
+}
+
+/* --- 3枚目（モックアップ画像単体表示）用の追加スタイル --- */
+.work-preview.is-mockup {
+    background-color: transparent;
+    /* 黒い背景枠を消してカードに馴染ませる */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: visible;
+    /* 端末のドロップシャドウ等が切れないようにする */
+}
+
+.work-preview.is-mockup img {
+    width: auto;
+    height: auto;
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain;
+    filter: drop-shadow(0 20px 35px rgba(0, 0, 0, 0.45));
+    /* モックアップを立体的に浮かせる */
+    transition: transform 0.3s ease, opacity 0.25s ease;
+}
+
+/* .work-preview.is-mockup img:hover {
+    transform: scale(1.02);
+    opacity: 1;
+} */
+
+/* .work-top{} */
+/* .work-headline {
     text-align: left;
     font-size: 5.6vw;
     font-weight: bold;
@@ -143,14 +474,16 @@ works
     padding: 0;
     font-family: 'Anton';
 }
-.works-sub{
+
+.work-sub {
     text-align: left;
     font-size: 2vw;
     font-weight: bold;
     margin: -6% 0 0 4vw;
     font-family: 'Anton';
 }
-.works-description{
+
+.work-description {
     width: 26vw;
     text-align: left;
     font-size: 0.6em;
@@ -158,34 +491,38 @@ works
     margin: 20% 0 0 4vw;
     font-weight: lighter;
 }
+
 .portfolio-url {
-	background-color: #000;
-	border: 1px solid #fff;
-	border-radius: 50vw;
+    background-color: #000;
+    border: 1px solid #fff;
+    border-radius: 50vw;
 }
+
 .web-url {
-	background-color: #000;
-	border: 1px solid #fff;
-	border-radius: 50vw;
+    background-color: #000;
+    border: 1px solid #fff;
+    border-radius: 50vw;
 }
 
 
-.portfolio{
+.portfolio {
     position: relative;
 }
+
 .portfolio p {
     position: absolute;
     top: 1%;
     left: 10%;
     text-shadow:
-    1px 1px 10px #ffffff,
-    -1px 1px 10px #ffffff,
-    1px -1px 10px #ffffff,
-    -1px -1px 10px #ffffff;
+        1px 1px 10px #ffffff,
+        -1px 1px 10px #ffffff,
+        1px -1px 10px #ffffff,
+        -1px -1px 10px #ffffff;
 }
-.portfolio-img{
+
+.portfolio-img {
     width: 54vw;
-    height:38vh;
+    height: 38vh;
     object-fit: cover;
     margin: 0 0 0 2vw;
     border-radius: 4vw;
@@ -193,28 +530,35 @@ works
     mask-position: 14vh 10vw;
     mask-size: 80vw 80vh;
 }
-.portfolio-img:hover{
+
+.portfolio-img:hover {
     filter: brightness(30%);
 }
-.works-section2{
+
+.work-section2 {
     display: flex;
     height: 40vh;
     overflow: hidden;
     animation: slidein 2s cubic-bezier(0.25, 1, 0.5, 1) forwards;
-}
+} */
+
 @keyframes slidein {
-    0% {opacity: 0;
-        transform: translateX(-300px);}
+    0% {
+        opacity: 0;
+        transform: translateX(-300px);
+    }
+
     80% {
         opacity: 1;
     }
+
     100% {
         opacity: 1;
         transform: translateX(0);
     }
 }
 
-.works-item{
+/* .work-item {
     width: 40vw;
     height: 36vh;
     object-fit: cover;
@@ -225,106 +569,122 @@ works
     gap: 0;
     overflow: hidden;
 }
-.hospital{
+
+.hospital {
     position: relative;
     height: 10vh;
 }
+
 .hospital p {
     position: absolute;
     top: 0;
     left: 6%;
     text-shadow:
-    1px 1px 10px #000000,
-    -1px 1px 10px #000000,
-    1px -1px 10px #000000,
-    -1px -1px 10px #000000;
+        1px 1px 10px #000000,
+        -1px 1px 10px #000000,
+        1px -1px 10px #000000,
+        -1px -1px 10px #000000;
 }
-.hospital-img{
+
+.hospital-img {
     width: 19vw;
     border-radius: 2vw;
     object-fit: cover;
     display: block;
 }
-.web{
+
+.web {
     position: relative;
     height: 10vh;
 }
+
 .web p {
     position: absolute;
     top: -30%;
     left: 6%;
     text-shadow:
-    1px 1px 10px #ffffff,
-    -1px 1px 10px #ffffff,
-    1px -1px 10px #ffffff,
-    -1px -1px 10px #ffffff;
+        1px 1px 10px #ffffff,
+        -1px 1px 10px #ffffff,
+        1px -1px 10px #ffffff,
+        -1px -1px 10px #ffffff;
 }
-.web-img{
+
+.web-img {
     width: 19vw;
     border-radius: 2vw;
     object-fit: cover;
     margin-top: -3.6vh;
 }
-.web-img:hover{
+
+.web-img:hover {
     filter: brightness(30%);
 }
-.architect{
+
+.architect {
     position: relative;
     height: 10vh;
 }
+
 .architect p {
     position: absolute;
     top: 0;
     left: 6%;
     text-shadow:
-    1px 1px 10px #ffffff,
-    -1px 1px 10px #ffffff,
-    1px -1px 10px #ffffff,
-    -1px -1px 10px #ffffff;
+        1px 1px 10px #ffffff,
+        -1px 1px 10px #ffffff,
+        1px -1px 10px #ffffff,
+        -1px -1px 10px #ffffff;
 }
-.architect-img{
+
+.architect-img {
     width: 19vw;
     border-radius: 2vw;
     object-fit: cover;
 }
-.drugstore{
+
+.drugstore {
     position: relative;
     height: 10vh;
 }
+
 .drugstore p {
     position: absolute;
     top: 60%;
     left: 6%;
     text-shadow:
-    1px 1px 10px #000000,
-    -1px 1px 10px #000000,
-    1px -1px 10px #000000,
-    -1px -1px 10px #000000;
+        1px 1px 10px #000000,
+        -1px 1px 10px #000000,
+        1px -1px 10px #000000,
+        -1px -1px 10px #000000;
 }
-.drugstore-img{
+
+.drugstore-img {
     width: 19vw;
     border-radius: 2vw;
     object-fit: cover;
     margin-top: 6vh;
 }
 
-.works-detail{
+.work-detail {
     text-align: center;
     margin: 1% 5% 3% 0;
     height: 38vh;
 }
-.works-detail > .detail-headline{
+
+.work-detail>.detail-headline {
     font-size: 1.4em;
     font-weight: bold;
     margin: 0 0 0 4vw;
     font-family: 'Anton';
 }
-.works-list{
+
+.work-list {
     font-size: 0.75em;
     text-align: left;
     margin: 0.4vh 0 0 2vw;
     padding: 0;
-}
+} */
+
 /* .w-portfolio{}
 .w-hospital{}
 .w-web{}
@@ -336,9 +696,9 @@ works
 /* 
 about 
 */
-.about{
+/* .about {
     position: sticky;
-    background-color: rgba(0, 0, 0, 0.5); 
+    background-color: rgba(0, 0, 0, 0.5);
     backdrop-filter: blur(10px);
     background-clip: border-box;
     border-radius: 4vw;
@@ -349,11 +709,13 @@ about
     margin-top: 16vh;
     overflow: hidden;
 }
-.about-item{
+
+.about-item {
     display: flex;
     padding: 0;
 }
-.profile-img{
+
+.profile-img {
     width: 40vw;
     height: 80vh;
     object-fit: cover;
@@ -364,10 +726,12 @@ about
     mask-size: 80vw 80vh;
     animation: fadeup 1.6s cubic-bezier(0.25, 1, 0.5, 1) forwards;
 }
-.about-section{
+
+.about-section {
     animation: slidein 2s cubic-bezier(0.25, 1, 0.5, 1) forwards;
 }
-.about-headline{
+
+.about-headline {
     text-align: left;
     font-size: 5.6vw;
     font-weight: bold;
@@ -375,14 +739,16 @@ about
     padding: 0;
     font-family: 'Anton';
 }
-.about-sub{
+
+.about-sub {
     text-align: left;
     font-size: 2vw;
     font-weight: bold;
     margin: -4.6% 0 0 12vw;
     font-family: 'Anton';
 }
-.about-description{
+
+.about-description {
     width: 26vw;
     text-align: left;
     font-size: 0.6em;
@@ -390,28 +756,359 @@ about
     margin: 0 0 0 12vw;
     font-weight: lighter;
 }
-.about-name{
+
+.about-name {
     text-align: center;
     font-size: 1.6em;
     font-weight: bold;
     font-family: 'Anton';
     margin: 6% 0 0 0;
 }
-.about-text{
+
+.about-text {
     font-size: 0.75em;
     text-align: left;
     margin: 0.4vh 0 0 2vw;
     padding: 0;
     margin: 0 12%;
+} */
+
+/* ABOUTセクション全体のベース（workカードと共通のテイスト） */
+/* .about {
+    position: sticky;
+    background-clip: border-box;
+    background-color: rgba(0, 0, 0, 0.65);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 4vw;
+    width: 80vw;
+    height: 80vh;
+    top: 14vh;
+    margin: 0 auto 10vh;
+    overflow: hidden;
+    padding: 5vh 5vw;
+    box-sizing: border-box;
+    color: #ffffff;
+} */
+/* 
+.about-card {
+    height: 100%;
 }
 
+.about-inner {
+    display: flex;
+    justify-content: space-between;
+    align-items: stretch;
+    height: 100%;
+    gap: 4vw;
+}
+
+.about-image-wrap {
+    flex: 0.9;
+    height: 100%;
+    background-color: #111;
+    border-radius: 1vw;
+    overflow: hidden;
+}
+
+.profile-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+.about-content {
+    flex: 1.2;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    overflow-y: auto;
+    padding-right: 1vw;
+}
+
+.about-num {
+    display: block;
+    font-family: 'Impact', 'Arial Black', sans-serif;
+    font-size: clamp(2rem, 3.5vw, 3.5rem);
+    line-height: 1;
+    letter-spacing: 0.02em;
+    margin-bottom: 0.5vh;
+}
+
+.about-sub {
+    font-size: clamp(1rem, 1.4vw, 1.4rem);
+    font-weight: 700;
+    letter-spacing: 0.1em;
+    margin: 0 0 1vh 0;
+    color: rgba(255, 255, 255, 0.7);
+}
+
+.about-lead {
+    font-size: clamp(0.8rem, 0.9vw, 0.95rem);
+    color: rgba(255, 255, 255, 0.6);
+    margin-bottom: 2vh;
+}
+
+.profile-intro {
+    margin-bottom: 2vh;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.15);
+    padding-bottom: 1.5vh;
+}
+
+.about-name {
+    font-size: clamp(1.4rem, 1.8vw, 1.8rem);
+    font-weight: 700;
+    margin: 0 0 0.4vh 0;
+}
+
+.about-name-jp {
+    font-size: 0.85em;
+    font-weight: 400;
+    margin-left: 0.5em;
+    color: rgba(255, 255, 255, 0.8);
+}
+
+.about-birth {
+    font-size: 0.9rem;
+    color: rgba(255, 255, 255, 0.7);
+    margin: 0;
+}
+
+.about-body {
+    font-size: clamp(0.85rem, 0.95vw, 1rem);
+    line-height: 1.7;
+    color: rgba(255, 255, 255, 0.9);
+}
+
+.about-block {
+    margin-bottom: 1.5vh;
+}
+
+.about-block p {
+    margin: 0 0 0.8vh 0;
+}
+
+.hobbys {
+    background: rgba(255, 255, 255, 0.05);
+    padding: 10px 14px;
+    border-radius: 6px;
+    font-size: 0.9rem;
+}
+
+.hobbys .label {
+    font-weight: 700;
+    color: #fff;
+    margin-right: 6px;
+}
+
+.about-contact {
+    display: flex;
+    gap: 2vw;
+    margin-top: 2vh;
+    padding-top: 1.5vh;
+    border-top: 1px solid rgba(255, 255, 255, 0.15);
+}
+
+.contact-link {
+    color: #fff;
+    text-decoration: none;
+    font-size: 0.85rem;
+    transition: opacity 0.2s;
+}
+
+.contact-link:hover {
+    opacity: 0.7;
+}
+
+.contact-label {
+    font-family: 'Impact', 'Arial Black', sans-serif;
+    letter-spacing: 0.05em;
+    margin-right: 4px;
+    color: rgba(255, 255, 255, 0.6);
+}
+
+.about-content::-webkit-scrollbar {
+    width: 6px;
+}
+
+.about-content::-webkit-scrollbar-track {
+    background: rgba(255, 255, 255, 0.05);
+}
+
+.about-content::-webkit-scrollbar-thumb {
+    background: rgba(255, 255, 255, 0.3);
+    border-radius: 3px;
+} */
+
+
+.about-card {
+    height: 100%;
+}
+
+.about-inner {
+    display: flex;
+    justify-content: space-between;
+    align-items: stretch;
+    height: 100%;
+    gap: 4vw;
+}
+
+/* 左側：画像エリア */
+.about-image-wrap {
+    flex: 0.9;
+    height: 100%;
+    background-color: #111;
+    border-radius: 1vw;
+    overflow: hidden;
+}
+
+.profile-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+/* 右側：テキストエリア（スクロール対応） */
+.about-content {
+    flex: 1.2;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    overflow-y: auto;
+    padding-right: 1vw;
+}
+
+.about-num {
+    display: block;
+    font-family: 'Impact', 'Arial Black', sans-serif;
+    font-size: clamp(2rem, 3.5vw, 3.5rem);
+    line-height: 1;
+    letter-spacing: 0.02em;
+    margin-bottom: 0.5vh;
+}
+
+.about-sub {
+    font-size: clamp(1rem, 1.4vw, 1.4rem);
+    font-weight: 700;
+    letter-spacing: 0.1em;
+    margin: 0 0 1vh 0;
+    color: rgba(255, 255, 255, 0.7);
+}
+
+/* 名前・生年月日 */
+.profile-intro {
+    margin-bottom: 2vh;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.15);
+    padding-bottom: 1.5vh;
+}
+
+.about-name {
+    font-size: clamp(1.3rem, 1.6vw, 1.6rem);
+    font-weight: 700;
+    margin: 0 0 0.2vh 0;
+}
+
+.about-name-jp {
+    font-size: 0.85em;
+    font-weight: 400;
+    margin-left: 0.5em;
+    color: rgba(255, 255, 255, 0.8);
+}
+
+.about-birth {
+    font-size: 0.85rem;
+    color: rgba(255, 255, 255, 0.7);
+    margin: 0;
+}
+
+/* 本文・各ブロック */
+.about-body {
+    font-size: clamp(0.8rem, 0.9vw, 0.95rem);
+    line-height: 1.65;
+    color: rgba(255, 255, 255, 0.9);
+}
+
+.about-block {
+    margin-bottom: 2vh;
+}
+
+.about-heading {
+    font-size: 0.95rem;
+    font-weight: 700;
+    color: #fff;
+    margin: 0 0 0.4vh 0;
+    border-left: 3px solid rgba(255, 255, 255, 0.6);
+    padding-left: 8px;
+}
+
+.about-block p {
+    margin: 0 0 0.4vh 0;
+    color: rgba(255, 255, 255, 0.85);
+}
+
+.hobbys {
+    background: rgba(255, 255, 255, 0.05);
+    padding: 12px 14px;
+    border-radius: 6px;
+}
+
+.hobbys .label {
+    font-weight: 700;
+    color: #fff;
+    display: inline-block;
+    margin-bottom: 4px;
+}
+
+/* 連絡先エリア */
+.about-contact {
+    display: flex;
+    gap: 2vw;
+    margin-top: 2vh;
+    padding-top: 1.5vh;
+    border-top: 1px solid rgba(255, 255, 255, 0.15);
+}
+
+.contact-link {
+    color: #fff;
+    text-decoration: none;
+    font-size: 0.85rem;
+    transition: opacity 0.2s;
+}
+
+.contact-link:hover {
+    opacity: 0.7;
+}
+
+.contact-label {
+    font-family: 'Impact', 'Arial Black', sans-serif;
+    letter-spacing: 0.05em;
+    margin-right: 4px;
+    color: rgba(255, 255, 255, 0.6);
+}
+
+/* スクロールバーのカスタマイズ */
+.about-content::-webkit-scrollbar {
+    width: 6px;
+}
+
+.about-content::-webkit-scrollbar-track {
+    background: rgba(255, 255, 255, 0.05);
+}
+
+.about-content::-webkit-scrollbar-thumb {
+    background: rgba(255, 255, 255, 0.3);
+    border-radius: 3px;
+}
 
 /* 
 others 
 */
-.others{
+.others {
     position: sticky;
-    background-color: rgba(0, 0, 0, 0.5); 
+    background-color: rgba(0, 0, 0, 0.5);
     backdrop-filter: blur(10px);
     background-clip: border-box;
     border-radius: 4vw;
@@ -422,12 +1119,14 @@ others
     overflow: hidden;
     margin-top: 6vh;
 }
-.others-section{
+
+.others-section {
     display: flex;
     animation: fadeup 1.6s cubic-bezier(0.25, 1, 0.5, 1) forwards;
 }
+
 /* .others-top{} */
-.others-headline{
+.others-headline {
     text-align: left;
     font-size: 5.6vw;
     font-weight: bold;
@@ -435,14 +1134,16 @@ others
     padding: 0;
     font-family: 'Anton';
 }
-.others-sub{
+
+.others-sub {
     text-align: left;
     font-size: 2vw;
     font-weight: bold;
     margin: -6% 0 0 4vw;
     font-family: 'Anton';
 }
-.others-description{
+
+.others-description {
     width: 26vw;
     text-align: left;
     font-size: 0.6em;
@@ -451,22 +1152,24 @@ others
     font-weight: lighter;
 }
 
-.illustration{
+.illustration {
     position: relative;
 }
+
 .illustration p {
     position: absolute;
     top: 1%;
     left: 12%;
     text-shadow:
-    1px 1px 10px #000000,
-    -1px 1px 10px #000000,
-    1px -1px 10px #000000,
-    -1px -1px 10px #000000;
+        1px 1px 10px #000000,
+        -1px 1px 10px #000000,
+        1px -1px 10px #000000,
+        -1px -1px 10px #000000;
 }
-.illustration-img{
+
+.illustration-img {
     width: 54vw;
-    height:38vh;
+    height: 38vh;
     object-fit: cover;
     margin: 0 0 0 4vw;
     border-radius: 4vw;
@@ -475,13 +1178,14 @@ others
     mask-size: 80vw 80vh;
 }
 
-.others-section2{
+.others-section2 {
     display: flex;
     height: 40vh;
     overflow: hidden;
     animation: slidein 2s cubic-bezier(0.25, 1, 0.5, 1) forwards;
 }
-.others-item{
+
+.others-item {
     width: 40vw;
     height: 36vh;
     object-fit: cover;
@@ -493,500 +1197,565 @@ others
     overflow: hidden;
 }
 
-.item-bottom-padding{
+.item-bottom-padding {
     height: 6vh;
 }
 
-.graphic{
+.graphic {
     position: relative;
     height: 10vh;
 }
+
 .graphic p {
     position: absolute;
     top: 0;
     left: 6%;
     text-shadow:
-    1px 1px 10px #ffffff,
-    -1px 1px 10px #ffffff,
-    1px -1px 10px #ffffff,
-    -1px -1px 10px #ffffff;
+        1px 1px 10px #ffffff,
+        -1px 1px 10px #ffffff,
+        1px -1px 10px #ffffff,
+        -1px -1px 10px #ffffff;
 }
-.graphic-img{
+
+.graphic-img {
     width: 19vw;
     border-radius: 2vw;
     object-fit: cover;
     display: block;
 }
-.fashion{
+
+.fashion {
     position: relative;
     height: 10vh;
 }
+
 .fashion p {
     position: absolute;
     top: -40%;
     left: 6%;
     text-shadow:
-    1px 1px 10px #000000,
-    -1px 1px 10px #000000,
-    1px -1px 10px #000000,
-    -1px -1px 10px #000000;
+        1px 1px 10px #000000,
+        -1px 1px 10px #000000,
+        1px -1px 10px #000000,
+        -1px -1px 10px #000000;
 }
-.fashion-img{
+
+.fashion-img {
     width: 19vw;
     border-radius: 2vw;
     object-fit: cover;
     margin-top: -3.6vh;
 }
-.vtuber{
+
+.vtuber {
     position: relative;
     height: 10vh;
 }
+
 .vtuber p {
     position: absolute;
     top: 0;
     left: 6%;
     text-shadow:
-    1px 1px 10px #ffffff,
-    -1px 1px 10px #ffffff,
-    1px -1px 10px #ffffff,
-    -1px -1px 10px #ffffff;
+        1px 1px 10px #ffffff,
+        -1px 1px 10px #ffffff,
+        1px -1px 10px #ffffff,
+        -1px -1px 10px #ffffff;
 }
-.vtuber-img{
+
+.vtuber-img {
     width: 19vw;
     border-radius: 2vw;
     object-fit: cover;
 }
-.character{
+
+.character {
     position: relative;
     height: 10vh;
 }
+
 .character p {
     position: absolute;
     top: 50%;
     left: 6%;
     text-shadow:
-    1px 1px 10px #000000,
-    -1px 1px 10px #000000,
-    1px -1px 10px #000000,
-    -1px -1px 10px #000000;
+        1px 1px 10px #000000,
+        -1px 1px 10px #000000,
+        1px -1px 10px #000000,
+        -1px -1px 10px #000000;
 }
-.character-img{
+
+.character-img {
     width: 19vw;
     border-radius: 2vw;
     object-fit: cover;
     margin-top: 6vh;
 }
 
-.others-detail{
+.others-detail {
     text-align: center;
     margin: 1% 5% 3% 0;
     height: 38vh;
 }
-.others-detail > .detail-headline{
+
+.others-detail>.detail-headline {
     font-size: 1.4em;
     font-weight: bold;
     margin: 0 0 0 4vw;
     font-family: 'Anton';
 }
-.others-list{
+
+.others-list {
     font-size: 0.75em;
     text-align: left;
     margin: 0.4vh 0 0 2vw;
     padding: 0;
 }
+
 /* .o-kuwasawa{}
 .o-illustration{}
 .o-fashion{}
 .o-graphic{}
 .o-character{} */
 
-	/* 959px以下に適用されるCSS（タブレット用） */
-    @media screen and (max-width: 959px) {
-        .hero > video {
-            width: 200vw;
-            height: auto;
-            margin: 0;
-            overflow: hidden;
-        } 
-        .h-list{
-            font-size: 0.6em;
-        }
-        .works{
-            position: sticky;
-            background-color: rgba(0, 0, 0, 0.5); 
-            backdrop-filter: blur(10px);
-            border-radius: 4vw;
-            width: 80vw;
-            height: 82vh;
-            top: 14vh;
-            left: 10vw;
-            overflow: hidden;
-        }
-        .works-section{
-            display: block;
-        }
-        .works-headline{
-            text-align: left;
-            font-size: 5.6vw;
-            font-weight: bold;
-            margin: 4vw 0 0 4vw;
-            padding: 0;
-            font-family: 'Anton';
-        }
-        .works-sub{
-            text-align: left;
-            font-size: 2vw;
-            font-weight: bold;
-            margin: 0 0 0 4vw;
-            font-family: 'Anton';
-        }
-        .works-description{
-            width: 72vw;
-            text-align: left;
-            font-size: 1.6vw;
-            font-weight: bold;
-            margin: 0 0 0 4vw;
-            font-weight: lighter;
-        }
-        
-        .portfolio{
-            position: relative;
-        }
-        .portfolio p {
-            position: absolute;
-            top: 10%;
-            left: 10%;
-            font-size: 0.8em;
-            text-shadow:
+/* 959px以下に適用されるCSS（タブレット用） */
+@media screen and (max-width: 959px) {
+    .hero>video {
+        width: 200vw;
+        height: auto;
+        margin: 0;
+        overflow: hidden;
+    }
+
+    .h-list {
+        font-size: 0.6em;
+    }
+
+    .work {
+        position: sticky;
+        background-color: rgba(0, 0, 0, 0.5);
+        backdrop-filter: blur(10px);
+        border-radius: 4vw;
+        width: 80vw;
+        height: 82vh;
+        top: 14vh;
+        left: 10vw;
+        overflow: hidden;
+    }
+
+    .work-section {
+        display: block;
+    }
+
+    .work-headline {
+        text-align: left;
+        font-size: 5.6vw;
+        font-weight: bold;
+        margin: 4vw 0 0 4vw;
+        padding: 0;
+        font-family: 'Anton';
+    }
+
+    .work-sub {
+        text-align: left;
+        font-size: 2vw;
+        font-weight: bold;
+        margin: 0 0 0 4vw;
+        font-family: 'Anton';
+    }
+
+    .work-description {
+        width: 72vw;
+        text-align: left;
+        font-size: 1.6vw;
+        font-weight: bold;
+        margin: 0 0 0 4vw;
+        font-weight: lighter;
+    }
+
+    .portfolio {
+        position: relative;
+    }
+
+    .portfolio p {
+        position: absolute;
+        top: 10%;
+        left: 10%;
+        font-size: 0.8em;
+        text-shadow:
             1px 1px 10px #000000,
             -1px 1px 10px #000000,
             1px -1px 10px #000000,
             -1px -1px 10px #000000;
-        }
-        .portfolio-img{
-            width: 72vw;
-            height: 12vh;
-            object-fit: cover;
-            margin: 4% 0 0 4vw;
-            border-radius: 4vw;
-            mask-repeat: no-repeat;
-            mask-position: 14vh 10vw;
-            mask-size: 80vw 80vh;
-        }
-        
-        .works-section2{
-            display: block;
-            height: auto;
-            overflow: hidden;
-        }
-        .works-item{
-            width: 74vw;
-            height: 20vh;
-            object-fit: cover;
-            margin: 5% 0 3% 5vw;
-            padding: 0;
-            display: grid;
-            grid-template-columns: repeat(2, 35vw);
-            gap: 0;
-            /* overflow: hidden; */
-        }
-        .hospital{
-            position: relative;
-            height: 10vh;
-        }
-        .hospital p {
-            position: absolute;
-            top: -10%;
-            left: 6%;
-            font-size: 0.8em;
-        }
-        .hospital-img{
-            width: 34vw;
-            height: 7vh;
-            border-radius: 2vw;
-            object-fit: cover;
-            display: block;
-        }
-        .web{
-            position: relative;
-            height: 10vh;
-        }
-        .web p {
-            position: absolute;
-            top: -30%;
-            left: 6%;
-            font-size: 0.8em;
-        }
-        .web-img{
-            width: 34vw;
-            height: 12.6vh;
-            border-radius: 2vw;
-            object-fit: cover;
-            margin-top: -2.4vh;
-        }
-        .architect{
-            position: relative;
-            height: 10vh;
-        }
-        .architect p {
-            position: absolute;
-            top: -10%;
-            left: 6%;
-            font-size: 0.8em;
-        }
-        .architect-img{
-            width: 34vw;
-            height: 12vh;
-            border-radius: 2vw;
-            object-fit: cover;
-        }
-        .drugstore{
-            position: relative;
-            height: 10vh;
-        }
-        .drugstore p {
-            position: absolute;
-            top: 16%;
-            left: 6%;
-            font-size: 0.8em;
-        }
-        .drugstore-img{
-            width: 34vw;
-            height: 7vh;
-            border-radius: 2vw;
-            object-fit: cover;
-            margin-top: 2.6vh;
-        }
-        .works-detail{
-            margin-top: 1%;
-            /* height: 100vh; */
-        }
-        .works-detail > .detail-headline{
-            text-align: center;
-            font-size: 1em;
-            font-weight: bold;
-            font-family: 'Anton';
-            margin: 1% 0 0 0;
-        }
-        .works-list{
-            font-size: 2vw;
-            text-align: left;
-            padding: 0;
-            margin-left: 10%;
-        }
-
-        .about{
-            height: 82vh;
-        }
-        .about-item{
-            display: block;
-            padding: 0;
-        }
-        .profile-img{
-            width: 80vw;
-            height: 30vh;
-            object-fit: cover;
-            margin: 2vh 0 0 4vw;
-            border-radius: 4vw;
-            mask-repeat: no-repeat;
-            mask-position: 14vh 10vw;
-            mask-size: 80vw 80vh;
-        }
-        /* .about-section{} */
-        .about-headline{
-            text-align: left;
-            font-size: 5.6vw;
-            font-weight: bold;
-            margin: 4vw 0 0 10vw;
-            padding: 0;
-            font-family: 'Anton';
-        }
-        .about-sub{
-            text-align: left;
-            font-size: 2vw;
-            font-weight: bold;
-            margin: -1% 0 0 10vw;
-            font-family: 'Anton';
-        }
-        .about-description{
-            width: 70vw;
-            text-align: left;
-            font-size: 1.6vw;
-            font-weight: bold;
-            margin: 0 0 0 10vw;
-            font-weight: lighter;
-        }
-        .about-name{
-            text-align: center;
-            font-size: 1em;
-            font-weight: bold;
-            font-family: 'Anton';
-            margin: 6% 0 0 0;
-        }
-        .about-text{
-            font-size: 2vw;
-            text-align: left;
-            margin: 5% 0 0 2vw;
-            padding: 0;
-            margin: 0 12%;
-        }
-        
-
-
-
-        .others{
-            position: sticky;
-            background-color: rgba(0, 0, 0, 0.5); 
-            backdrop-filter: blur(10px);
-            border-radius: 4vw;
-            width: 80vw;
-            height: 82vh;
-            top: 14vh;
-            left: 10vw;
-            overflow: hidden;
-        }
-        .others-section{
-            display: block;
-        }
-        .others-headline{
-            text-align: left;
-            font-size: 5.6vw;
-            font-weight: bold;
-            margin: 4vw 0 0 4vw;
-            padding: 0;
-            font-family: 'Anton';
-        }
-        .others-sub{
-            text-align: left;
-            font-size: 2vw;
-            font-weight: bold;
-            margin: 0 0 0 4vw;
-            font-family: 'Anton';
-        }
-        .others-description{
-            width: 72vw;
-            text-align: left;
-            font-size: 1.6vw;
-            font-weight: bold;
-            margin: 0 0 0 4vw;
-            font-weight: lighter;
-        }
-        
-        .illustration{
-            position: relative;
-        }
-        .illustration p {
-            position: absolute;
-            top: 10%;
-            left: 10%;
-            font-size: 0.8em;
-        }
-        .illustration-img{
-            width: 72vw;
-            height: 12vh;
-            object-fit: cover;
-            margin: 4% 0 0 4vw;
-            border-radius: 4vw;
-            mask-repeat: no-repeat;
-            mask-position: 14vh 10vw;
-            mask-size: 80vw 80vh;
-        }
-        
-        .others-section2{
-            display: block;
-            overflow: hidden;
-            height: auto;
-        }
-        .others-item{
-            width: 74vw;
-            height: 20vh;
-            object-fit: cover;
-            margin: 5% 0 3% 5vw;
-            padding: 0;
-            display: grid;
-            grid-template-columns: repeat(2, 35vw);
-            gap: 0;
-
-        }
-        .graphic{
-            position: relative;
-            height: 10vh;
-        }
-        .graphic p {
-            position: absolute;
-            top: -10%;
-            left: 6%;
-            font-size: 0.8em;
-        }
-        .graphic-img{
-            width: 34vw;
-            height: 7vh;
-            border-radius: 2vw;
-            object-fit: cover;
-            display: block;
-        }
-        .fashion{
-            position: relative;
-            height: 10vh;
-        }
-        .fashion p {
-            position: absolute;
-            top: -30%;
-            left: 6%;
-            font-size: 0.8em;
-        }
-        .fashion-img{
-            width: 34vw;
-            height: 12.6vh;
-            border-radius: 2vw;
-            object-fit: cover;
-            margin-top: -2.4vh;
-        }
-        .vtuber{
-            position: relative;
-            height: 10vh;
-        }
-        .vtuber p {
-            position: absolute;
-            top: -10%;
-            left: 6%;
-            font-size: 0.8em;
-        }
-        .vtuber-img{
-            width: 34vw;
-            height: 12vh;
-            border-radius: 2vw;
-            object-fit: cover;
-        }
-        .character{
-            position: relative;
-            height: 10vh;
-        }
-        .character p {
-            position: absolute;
-            top: 16%;
-            left: 6%;
-            font-size: 0.8em;
-        }
-        .character-img{
-            width: 34vw;
-            height: 7vh;
-            border-radius: 2vw;
-            object-fit: cover;
-            margin-top: 2.6vh;
-        }
-        
-        .others-detail{
-            margin-top: 1%;
-        }
-        .others-detail > .detail-headline{
-            font-size: 1em;
-            font-weight: bold;
-            font-family: 'Anton';
-        }
-        .others-list{
-            font-size: 2vw;
-            margin: 0 0 0 10%;
-            padding: 0;
-        }
     }
+
+    .portfolio-img {
+        width: 72vw;
+        height: 12vh;
+        object-fit: cover;
+        margin: 4% 0 0 4vw;
+        border-radius: 4vw;
+        mask-repeat: no-repeat;
+        mask-position: 14vh 10vw;
+        mask-size: 80vw 80vh;
+    }
+
+    .work-section2 {
+        display: block;
+        height: auto;
+        overflow: hidden;
+    }
+
+    .work-item {
+        width: 74vw;
+        height: 20vh;
+        object-fit: cover;
+        margin: 5% 0 3% 5vw;
+        padding: 0;
+        display: grid;
+        grid-template-columns: repeat(2, 35vw);
+        gap: 0;
+        /* overflow: hidden; */
+    }
+
+    .hospital {
+        position: relative;
+        height: 10vh;
+    }
+
+    .hospital p {
+        position: absolute;
+        top: -10%;
+        left: 6%;
+        font-size: 0.8em;
+    }
+
+    .hospital-img {
+        width: 34vw;
+        height: 7vh;
+        border-radius: 2vw;
+        object-fit: cover;
+        display: block;
+    }
+
+    .web {
+        position: relative;
+        height: 10vh;
+    }
+
+    .web p {
+        position: absolute;
+        top: -30%;
+        left: 6%;
+        font-size: 0.8em;
+    }
+
+    .web-img {
+        width: 34vw;
+        height: 12.6vh;
+        border-radius: 2vw;
+        object-fit: cover;
+        margin-top: -2.4vh;
+    }
+
+    .architect {
+        position: relative;
+        height: 10vh;
+    }
+
+    .architect p {
+        position: absolute;
+        top: -10%;
+        left: 6%;
+        font-size: 0.8em;
+    }
+
+    .architect-img {
+        width: 34vw;
+        height: 12vh;
+        border-radius: 2vw;
+        object-fit: cover;
+    }
+
+    .drugstore {
+        position: relative;
+        height: 10vh;
+    }
+
+    .drugstore p {
+        position: absolute;
+        top: 16%;
+        left: 6%;
+        font-size: 0.8em;
+    }
+
+    .drugstore-img {
+        width: 34vw;
+        height: 7vh;
+        border-radius: 2vw;
+        object-fit: cover;
+        margin-top: 2.6vh;
+    }
+
+    .work-detail {
+        margin-top: 1%;
+        /* height: 100vh; */
+    }
+
+    .work-detail>.detail-headline {
+        text-align: center;
+        font-size: 1em;
+        font-weight: bold;
+        font-family: 'Anton';
+        margin: 1% 0 0 0;
+    }
+
+    .work-list {
+        font-size: 2vw;
+        text-align: left;
+        padding: 0;
+        margin-left: 10%;
+    }
+
+    .about {
+        height: 82vh;
+    }
+
+    .about-item {
+        display: block;
+        padding: 0;
+    }
+
+    .profile-img {
+        width: 80vw;
+        height: 30vh;
+        object-fit: cover;
+        margin: 2vh 0 0 4vw;
+        border-radius: 4vw;
+        mask-repeat: no-repeat;
+        mask-position: 14vh 10vw;
+        mask-size: 80vw 80vh;
+    }
+
+    /* .about-section{} */
+    .about-headline {
+        text-align: left;
+        font-size: 5.6vw;
+        font-weight: bold;
+        margin: 4vw 0 0 10vw;
+        padding: 0;
+        font-family: 'Anton';
+    }
+
+    .about-sub {
+        text-align: left;
+        font-size: 2vw;
+        font-weight: bold;
+        margin: -1% 0 0 10vw;
+        font-family: 'Anton';
+    }
+
+    .about-description {
+        width: 70vw;
+        text-align: left;
+        font-size: 1.6vw;
+        font-weight: bold;
+        margin: 0 0 0 10vw;
+        font-weight: lighter;
+    }
+
+    .about-name {
+        /* font-size: 1em; */
+        font-weight: bold;
+        font-family: 'Anton';
+        margin: 6% 0 0 0;
+    }
+
+    .about-text {
+        font-size: 2vw;
+        text-align: left;
+        margin: 5% 0 0 2vw;
+        padding: 0;
+        margin: 0 12%;
+    }
+
+
+
+
+    .others {
+        position: sticky;
+        background-color: rgba(0, 0, 0, 0.5);
+        backdrop-filter: blur(10px);
+        border-radius: 4vw;
+        width: 80vw;
+        height: 82vh;
+        top: 14vh;
+        left: 10vw;
+        overflow: hidden;
+    }
+
+    .others-section {
+        display: block;
+    }
+
+    .others-headline {
+        text-align: left;
+        font-size: 5.6vw;
+        font-weight: bold;
+        margin: 4vw 0 0 4vw;
+        padding: 0;
+        font-family: 'Anton';
+    }
+
+    .others-sub {
+        text-align: left;
+        font-size: 2vw;
+        font-weight: bold;
+        margin: 0 0 0 4vw;
+        font-family: 'Anton';
+    }
+
+    .others-description {
+        width: 72vw;
+        text-align: left;
+        font-size: 1.6vw;
+        font-weight: bold;
+        margin: 0 0 0 4vw;
+        font-weight: lighter;
+    }
+
+    .illustration {
+        position: relative;
+    }
+
+    .illustration p {
+        position: absolute;
+        top: 10%;
+        left: 10%;
+        font-size: 0.8em;
+    }
+
+    .illustration-img {
+        width: 72vw;
+        height: 12vh;
+        object-fit: cover;
+        margin: 4% 0 0 4vw;
+        border-radius: 4vw;
+        mask-repeat: no-repeat;
+        mask-position: 14vh 10vw;
+        mask-size: 80vw 80vh;
+    }
+
+    .others-section2 {
+        display: block;
+        overflow: hidden;
+        height: auto;
+    }
+
+    .others-item {
+        width: 74vw;
+        height: 20vh;
+        object-fit: cover;
+        margin: 5% 0 3% 5vw;
+        padding: 0;
+        display: grid;
+        grid-template-columns: repeat(2, 35vw);
+        gap: 0;
+
+    }
+
+    .graphic {
+        position: relative;
+        height: 10vh;
+    }
+
+    .graphic p {
+        position: absolute;
+        top: -10%;
+        left: 6%;
+        font-size: 0.8em;
+    }
+
+    .graphic-img {
+        width: 34vw;
+        height: 7vh;
+        border-radius: 2vw;
+        object-fit: cover;
+        display: block;
+    }
+
+    .fashion {
+        position: relative;
+        height: 10vh;
+    }
+
+    .fashion p {
+        position: absolute;
+        top: -30%;
+        left: 6%;
+        font-size: 0.8em;
+    }
+
+    .fashion-img {
+        width: 34vw;
+        height: 12.6vh;
+        border-radius: 2vw;
+        object-fit: cover;
+        margin-top: -2.4vh;
+    }
+
+    .vtuber {
+        position: relative;
+        height: 10vh;
+    }
+
+    .vtuber p {
+        position: absolute;
+        top: -10%;
+        left: 6%;
+        font-size: 0.8em;
+    }
+
+    .vtuber-img {
+        width: 34vw;
+        height: 12vh;
+        border-radius: 2vw;
+        object-fit: cover;
+    }
+
+    .character {
+        position: relative;
+        height: 10vh;
+    }
+
+    .character p {
+        position: absolute;
+        top: 16%;
+        left: 6%;
+        font-size: 0.8em;
+    }
+
+    .character-img {
+        width: 34vw;
+        height: 7vh;
+        border-radius: 2vw;
+        object-fit: cover;
+        margin-top: 2.6vh;
+    }
+
+    .others-detail {
+        margin-top: 1%;
+    }
+
+    .others-detail>.detail-headline {
+        font-size: 1em;
+        font-weight: bold;
+        font-family: 'Anton';
+    }
+
+    .others-list {
+        font-size: 2vw;
+        margin: 0 0 0 10%;
+        padding: 0;
+    }
+}
