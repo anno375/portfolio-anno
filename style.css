@@ -31,32 +31,40 @@ a:hover {
 /* 
 hero 
 */
+
 #hero {
     margin: 0;
     padding: 0;
     position: relative;
     border: none;
     width: 100vw;
-    height: auto
+    height: auto;
 }
 
 .hero {
     width: 100vw;
-    height: 50vh;
+    height: 100vh;
+    /* 画面全体の高さにする */
     margin: 0;
     padding: 0;
     position: relative;
     overflow: hidden;
 }
 
-.hero>video {
+/* 動画を画面いっぱいに固定して収める */
+.hero .video {
     position: fixed;
+    top: 0;
+    left: 0;
     width: 100vw;
-    height: auto;
+    height: 100vh;
+    object-fit: cover;
+    /* 比率を保ったまま画面全体を埋める */
+    z-index: -1;
+    /* カードやヘッダーより後ろに配置する */
     margin: 0;
+    padding: 0;
 }
-
-/* .background-video{} */
 
 
 /* 
@@ -377,36 +385,10 @@ work
     }
 }
 
-/* --- 2枚目専用：2×2グリッドのレイアウト --- */
-.banner-grid-2x2 {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    grid-template-rows: repeat(2, 1fr);
-    gap: 1.2vh 1.2vw;
-    padding: 1.5vh 1.5vw;
-    box-sizing: border-box;
-    height: 100%;
-    align-content: center;
-}
-
-.banner-grid-2x2 img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    /* 枠に合わせて綺麗にトリミング・収める */
-    border-radius: 8px;
-    cursor: zoom-in;
-    transition: transform 0.25s ease, opacity 0.25s ease;
-    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
-}
-
-.banner-grid-2x2 img:hover {
-    transform: scale(1.03);
-    opacity: 0.95;
-}
-
 #work-02,
 #work-03,
+#work-04,
+#work-05,
 #about {
     position: sticky;
     background-clip: border-box;
@@ -438,109 +420,77 @@ work
     overflow: hidden; */
 }
 
-/* --- 3枚目（モックアップ画像単体表示）用の追加スタイル --- */
-.work-preview.is-mockup {
+/* #work-04（アプリUI改修）を枠内にすっぽり収める */
+#work-04 .work-preview.is-mockup {
     background-color: transparent;
-    /* 黒い背景枠を消してカードに馴染ませる */
     display: flex;
     align-items: center;
     justify-content: center;
-    overflow: visible;
-    /* 端末のドロップシャドウ等が切れないようにする */
+    height: 100%;
+    overflow: hidden;
 }
 
-.work-preview.is-mockup img {
+#work-04 .work-preview.is-mockup img {
     width: auto;
     height: auto;
     max-width: 100%;
     max-height: 100%;
     object-fit: contain;
     filter: drop-shadow(0 20px 35px rgba(0, 0, 0, 0.45));
-    /* モックアップを立体的に浮かせる */
-    transition: transform 0.3s ease, opacity 0.25s ease;
 }
 
-/* .work-preview.is-mockup img:hover {
-    transform: scale(1.02);
-    opacity: 1;
-} */
-
-/* .work-top{} */
-/* .work-headline {
-    text-align: left;
-    font-size: 5.6vw;
-    font-weight: bold;
-    margin: 4vw 0 0 4vw;
-    padding: 0;
-    font-family: 'Anton';
-}
-
-.work-sub {
-    text-align: left;
-    font-size: 2vw;
-    font-weight: bold;
-    margin: -6% 0 0 4vw;
-    font-family: 'Anton';
-}
-
-.work-description {
-    width: 26vw;
-    text-align: left;
-    font-size: 0.6em;
-    font-weight: bold;
-    margin: 20% 0 0 4vw;
-    font-weight: lighter;
-}
-
-.portfolio-url {
-    background-color: #000;
-    border: 1px solid #fff;
-    border-radius: 50vw;
-}
-
-.web-url {
-    background-color: #000;
-    border: 1px solid #fff;
-    border-radius: 50vw;
-}
-
-
-.portfolio {
-    position: relative;
-}
-
-.portfolio p {
-    position: absolute;
-    top: 1%;
-    left: 10%;
-    text-shadow:
-        1px 1px 10px #ffffff,
-        -1px 1px 10px #ffffff,
-        1px -1px 10px #ffffff,
-        -1px -1px 10px #ffffff;
-}
-
-.portfolio-img {
-    width: 54vw;
-    height: 38vh;
-    object-fit: cover;
-    margin: 0 0 0 2vw;
-    border-radius: 4vw;
-    mask-repeat: no-repeat;
-    mask-position: 14vh 10vw;
-    mask-size: 80vw 80vh;
-}
-
-.portfolio-img:hover {
-    filter: brightness(30%);
-}
-
-.work-section2 {
+/* --- 5枚目（動画2本縦並び）の修正スタイル --- */
+.work-preview.is-video {
+    background-color: transparent;
     display: flex;
-    height: 40vh;
+    align-items: center;
+    justify-content: center;
     overflow: hidden;
-    animation: slidein 2s cubic-bezier(0.25, 1, 0.5, 1) forwards;
-} */
+}
+
+.video-list {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    gap: 2vh;
+    /* 上下の動画の隙間 */
+    width: 100%;
+    height: 100%;
+    padding: 1vh 0;
+    box-sizing: border-box;
+}
+
+.video-item {
+    width: 100%;
+    max-height: calc(50% - 1vh);
+    /* カードの高さの半分に綺麗に収める */
+    border-radius: 1vw;
+    overflow: hidden;
+    background-color: #000;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.4);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* 1本目の比率 (16:9) */
+.video-item.video-16-9 {
+    aspect-ratio: 16 / 9;
+}
+
+/* 2本目の比率 (2132 x 1200) */
+.video-item.video-custom {
+    aspect-ratio: 2132 / 1200;
+}
+
+.video-item video {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    /* 映像が切れないように全体を表示 */
+    display: block;
+}
 
 @keyframes slidein {
     0% {

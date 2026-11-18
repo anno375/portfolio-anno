@@ -14,7 +14,7 @@
 <body class="all">
     <div id="hero" class="hero">
         <video class="video" autoplay loop muted preload>
-            <source src="./assets/background_video2.mp4" type="video/mp4" class="background-video" />
+            <source src="./assets/background_video.mov" type="video/mp4" class="background-video" />
         </video>
     </div>
 
@@ -22,7 +22,6 @@
         <ul class="h-list">
             <li class="h-work"><a href="#work" class="work-link">01 WORK</a></li>
             <li class="h-about"><a href="#about" class="about-link">02 ABOUT</a></li>
-            <li class="h-others"><a href="#others" class="other-link">03 OTHERS</a></li>
         </ul>
         </nav>
     </header>
@@ -56,20 +55,13 @@
                         </div>
                     </div>
 
-                    <!-- <div class="work-action">
-                        <a href="https://example.com" target="_blank" rel="noopener noreferrer" class="btn-view">
-                            実際のページを見る ↗
-                        </a>
-                    </div> -->
                 </div>
 
                 <!-- 右側：クリックでモーダルが開くプレビューエリア -->
                 <div class="work-preview">
                     <div class="preview-scroll">
-                        <!-- js-modal-trigger クラスをつけた画像がクリック対象になります -->
                         <img src="assets/work-01.webp" alt="プロモーションLP 全体デザイン" class="js-modal-trigger">
                     </div>
-                    <!-- <span class="zoom-hint">Click to expand</span> -->
                 </div>
             </div>
         </section>
@@ -112,16 +104,6 @@
                     </div>
                 </div>
 
-                <!-- 右側：4枚のバナーを2×2グリッドで配置 -->
-                <!-- <div class="work-preview">
-                    <div class="preview-scroll banner-grid-2x2">
-                        <img src="banner-01.jpg" alt="下取りキャンペーンバナー" class="js-modal-trigger">
-                        <img src="banner-02.jpg" alt="SkyNova バナー" class="js-modal-trigger">
-                        <img src="banner-03.jpg" alt="レーザー距離計プロモーションバナー" class="js-modal-trigger">
-                        <img src="banner-04.jpg" alt="ベストスコア訴求バナー" class="js-modal-trigger">
-                    </div>
-                    <span class="zoom-hint">Click to expand</span>
-                </div> -->
                 <div class="work-preview">
                     <div class="preview-scroll">
                         <!-- js-modal-trigger クラスをつけた画像がクリック対象になります -->
@@ -133,13 +115,51 @@
         </section>
 
 
-        <!-- 3枚目：アプリ UI改修 -->
+        <!-- 3枚目：LINEミニアプリUI -->
         <section id="work-03" class="work">
             <div class="work-inner">
                 <!-- 左側：テキストエリア -->
                 <div class="work-info">
                     <div class="work-header">
                         <span class="work-num">03 WORK</span>
+                        <h2 class="work-title">LINEミニアプリUI</h2>
+                    </div>
+
+                    <div class="work-details">
+                        <div class="work-block">
+                            <h3>Concept</h3>
+                            <p>「専門用語が多く、契約内容や発電状況を把握しづらい」という課題に対し、親しみやすいフラットイラストと直感的なアイコン設計で情報の視認性を向上。LINE上で迷わずアクセスできるストレスフリーなUIを構築し、ユーザー自身がいつでも安心して契約状況を確認できる体験を設計
+                            </p>
+                        </div>
+
+                        <div class="work-block">
+                            <h3>Role</h3>
+                            <p>UI/UXデザイン・レイアウト構成・パーツ設計</p>
+                        </div>
+
+                        <div class="work-block">
+                            <h3>Tools</h3>
+                            <p>Figma / Illustrator</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 右側：背景透明のまま縦スクロールできるモックアップエリア -->
+                <div class="work-preview is-mockup">
+                    <div class="preview-scroll">
+                        <img src="assets/work-03.webp" alt="LINEミニアプリUI 画面デザイン" class="js-modal-trigger">
+                    </div>
+                    <!-- <span class="zoom-hint">Click to expand</span> -->
+                </div>
+            </div>
+        </section>
+
+        <section id="work-04" class="work">
+            <div class="work-inner">
+                <!-- 左側：テキストエリア -->
+                <div class="work-info">
+                    <div class="work-header">
+                        <span class="work-num">04 WORK</span>
                         <h2 class="work-title">アプリ UI改修</h2>
                     </div>
 
@@ -164,78 +184,61 @@
 
                 <!-- 右側：モックアップ表示エリア（is-mockup クラスを付与） -->
                 <div class="work-preview is-mockup">
-                    <img src="assets/work-03.webp" alt="アプリ UI改修 iPad・iPhone画面" class="js-modal-trigger">
+                    <img src="assets/work-04.webp" alt="アプリ UI改修 iPad・iPhone画面" class="js-modal-trigger">
                     <!-- <span class="zoom-hint">Click to expand</span> -->
                 </div>
             </div>
         </section>
 
+        <!-- 5枚目：プロモーション動画・広告動画制作 -->
+        <section id="work-05" class="work">
+            <div class="work-inner">
+                <!-- 左側：テキストエリア -->
+                <div class="work-info">
+                    <div class="work-header">
+                        <span class="work-num">05 WORK</span>
+                        <h2 class="work-title">プロモーション・広告動画制作</h2>
+                    </div>
 
+                    <div class="work-details">
+                        <div class="work-block">
+                            <h3>Concept</h3>
+                            <p>3DCGを活用した臨場感あふれるプロモーション動画の制作から、CVR向上を意識したGoogle動画広告のデザインまでを担当。商品の世界観を直感的に伝えつつ、ユーザーの心を動かすクリエイティブを設計
+                            </p>
+                        </div>
 
+                        <div class="work-block">
+                            <h3>Role</h3>
+                            <p>構成・3DCG制作・動画編集・モーショングラフィックス</p>
+                        </div>
 
-        <!-- <section class="item-bottom-padding"></section> -->
+                        <div class="work-block">
+                            <h3>Tools</h3>
+                            <p>Blender / After Effects / Premiere Pro / Illustrator</p>
+                        </div>
+                    </div>
+                </div>
 
-        <!-- <section id="about" class="about">
-            <div class="about-item">
-                <img src="./assets/profile.png" alt="no image..." class="profile-img" />
-                <div class="about-section">
-                    <div class="about-headline">02 ABOUT</div>
-                    <div class="about-sub">PROFILE</div>
-                    <p class="about-description">Here is my background and brief work history.
-                    </p>
-                    <h3 class="about-name">Anno Minako</h3>
-                    <p class="about-text">阿武 未奈子 1996.5.22生まれ<br />
-                        <br />
-                        山口県下関市立南高等学校の理数クラス卒業<br />
-                        桑沢デザイン研究所に入学するため東京上京<br />
-                        <br />
-                        グラフィック、空間、プロダクト、ファッションデザインを学び、卒業後はアパレル業界に就職。<br />
-                        アパレルでファッションデザイナーとして5年勤めた会社を退職し、Webデザイン会社にてWebデザインを学ぶ。<br />
-                        趣味はイラスト、ファッション、スポーツ全般。ポメラニアンとお酒が好き<br />
-                        <br />
-                        mail : anchan8522@gmail.com<br />
-                        tel : 090-9473-2258<br />
-                    </p>
-
-
+                <!-- 右側：動画2本配置エリア -->
+                <div class="work-preview is-video">
+                    <div class="video-list">
+                        <!-- 1本目 (16:9) -->
+                        <div class="video-item video-16-9">
+                            <video src="assets/video-01.mp4" muted controls playsinline preload="metadata"></video>
+                        </div>
+                        <!-- 2本目 (2132x1200用) -->
+                        <div class="video-item video-custom">
+                            <video src="assets/video-02.mp4" muted controls playsinline preload="metadata"></video>
+                        </div>
+                    </div>
                 </div>
             </div>
-        </section> -->
+        </section>
 
-        <!-- <section id="about" class="about">
-            <div class="about-item">
-                <div class="about-section">
-                    <div class="about-headline">02 ABOUT</div>
-                    <div class="about-sub">PROFILE</div>
-                    <p class="about-description">Here is my background and brief work history.
-                    </p>
-                    <h3 class="about-name">Anno Minako</h3>
-                    <p class="about-text">阿武 未奈子 1996.5.22生まれ<br />
-                        <br />
-                        山口県下関市立南高等学校の理数クラス卒業<br />
-                        桑沢デザイン研究所に入学するため東京上京<br />
-                        <br />
-                        グラフィック、空間、プロダクト、ファッションデザインを学び、卒業後はアパレル業界に就職。<br />
-                        アパレルでファッションデザイナーとして5年勤めた会社を退職し、Webデザイン会社にてWebデザインを学ぶ。<br />
-                        趣味はイラスト、ファッション、スポーツ全般。ポメラニアンとお酒が好き<br />
-                        <br />
-                        mail : anchan8522@gmail.com<br />
-                        tel : 090-9473-2258<br />
-                    </p>
-
-
-                </div>
-            </div>
-        </section> -->
         <section id="about" class="about">
             <div class="about-card">
                 <div class="about-inner">
-                    <!-- 左側：プロフィール画像 -->
-                    <div class="about-image-wrap">
-                        <img src="./assets/profile.png" alt="Anno Minako プロフィール画像" class="profile-img" />
-                    </div>
 
-                    <!-- 右側：プロフィール詳細（スクロール対応） -->
                     <div class="about-content">
                         <div class="about-header">
                             <span class="about-num">02 ABOUT</span>
@@ -251,7 +254,7 @@
                                 <h4 class="about-heading">経歴とキャリアの変化</h4>
                                 <p>新卒で約5年間、ベンチャー企業にてファッションデザイナーや生産マネージャーを経験。ものづくりに携わる中で、よりデータや数値成果に直結し、市場のスピード感に対応できる領域への希望が強くなり、Web業界へ転身。
                                 </p>
-                                <p>現在はゴルフナビメーカーにて、Web・EC・アプリ・グラフィック領域全般のデザインおよび制作を担当。</p>
+                                <p>現在はゴルフナビメーカーにて、Web・EC・アプリ・グラフィック領域全般のデザインおよび制作を担当。副業でアプリデザインも行っている。</p>
                             </div>
 
                             <div class="about-block">
@@ -260,14 +263,9 @@
                                     1,600%を達成。</p>
                             </div>
 
-                            <div class="about-block">
-                                <h4 class="about-heading">今後の展望</h4>
-                                <p>Webやグラフィックにとどまらず、モバイルアプリのUI/UX設計を主導するプロダクトデザイナー（リードUI/UXデザイナー）や、将来的にはPdM（プロダクトマネージャー）など、サービスの企画・上流工程から事業成長を牽引する役割に挑戦。
-                                </p>
-                            </div>
 
                             <div class="about-block hobbys">
-                                <span class="label">パーソナリティ・趣味 :</span>
+                                <span class="label">得意・好きなこと:</span>
                                 <p>新しい領域へのキャッチアップが得意で、動画編集や3D（Blender）などを自学で習得し業務に還元。趣味はスポーツ（野球・バスケ等）、お酒、銭湯巡り。オン・オフともにフットワークの軽さと柔軟性を大切にしています。
                                 </p>
                             </div>
@@ -287,70 +285,6 @@
             </div>
         </section>
 
-        <!-- <section class="item-bottom-padding"></section> -->
-
-        <section id="others" class="others">
-            <div class="others-section">
-                <div class="others-top">
-                    <div class="others-headline">03 OTHERS</div>
-                    <div class="others-sub">OTHERS PROJECT</div>
-                    <div class="others-description">These are work projects and hobby productions received outside of
-                        the company.
-                        This also has details corresponding to the number.
-                    </div>
-                </div>
-                <div class="illustration">
-                    <p>01</p>
-                    <a href="https://drive.google.com/file/d/1zgmRxhWwHKarRL0xpi3OagQnBOlGJvTw/view?usp=drive_link"
-                        target="_blank">
-                        <img src="./assets/movie.png" alt="no image..." class="illustration-img" /></a>
-                </div>
-            </div>
-
-            <section class="others-section2">
-                <div class="others-item">
-                    <div class="graphic">
-                        <p style="postion: absolut; top: 0; left: 2px">02</p>
-                        <a href="https://drive.google.com/file/d/1iULep-7_B7PgUaVvQ1fRaf9a3uAtAXqT/view?usp=drive_link"
-                            target="_blank">
-                            <img src="./assets/3d.png" height="180" alt="no image..." class="fashion-img"
-                                style="margin-top: 0" /></a>
-                    </div>
-                    <div class="vtuber">
-                        <p style="postion: absolut; top: 0; left: 2px">03</p>
-                        <a href="https://drive.google.com/file/d/1fJhNU-H8SfkbL0xoJvbFc10x50OAKwow/view?usp=drivesdk"
-                            target="_blank">
-                            <img src="./assets/graphic.png" height="112" alt="no image..." class="graphic-img" /></a>
-                    </div>
-                    <div class="fashion">
-                        <p style="postion: absolut; top: 10px; left: 2px">04</p>
-                        <a href="https://drive.google.com/file/d/1F4CRL7vSpfW00gYqvPVDz_6MmFZkkIOB/view?usp=drivesdk"
-                            target="_blank">
-                            <img src="./assets/fashion.png" height="112" alt="no image..." class="graphic-img"
-                                style="margin-top: 3vh" /></a>
-                    </div>
-                    <div class="illustration">
-                        <p style="postion: absolut; top: 0; left: 2px">05</p>
-                        <a href="https://drive.google.com/file/d/1TvpL_xdFYwU3aiKjffAV9TdX9QhwIKUy/view?usp=drivesdk"
-                            target="_blank">
-                            <img src="./assets/illustration.png" height="180" alt="no image..."
-                                class="fashion-img" /></a>
-                    </div>
-                </div>
-
-                <div class="others-detail">
-                    <div class="detail-headline">DETAILS</div>
-                    <ol class="others-list">
-                        <li class="o-illustration">動画制作<br />使用ツール : After Effects / Premium Pro 制作期間 : 1週間</li>
-                        <li class="o-3d">3Dモデリング<br />使用ツール : 3D blender 制作期間 : 1週間<br>
-                        <li class="o-graphic">グラフィックデザイン<br />使用ツール : illustrator / Photoshop 制作期間 : 1時間</li>
-                        <li class="o-fashion">ファッションデザイン<br />使用ツール : illustrator / Photoshop 制作期間 : 3日</li>
-                        <li class="o-illustration">イラストレーション<br />使用ツール : illustrator / Photoshop 制作期間 : 1日</li>
-
-                    </ol>
-                </div>
-            </section>
-        </section>
         <section class="item-bottom-padding"></section>
     </section>
 </body>
