@@ -126,6 +126,39 @@
                     <div class="work-info">
                         <header class="work-header">
                             <span class="work-num">04 WORK</span>
+                            <h2 class="work-title">ECモールデザイン（EXCEEDS GII）</h2>
+                        </header>
+
+                        <div class="work-details">
+                            <div class="work-block">
+                                <h3>Concept</h3>
+                                <p>機能や数値が多く、玄人向けでわかりづらい・選び方のポイントが見えづらいという課題に対し、楽天などの他社競合と並んでも直感的に伝わる構成とビジュアルを設計。セクションごとのトーンや図解、装着イメージで魅力を際立たせ、比較検討から納得感のある選択へ導くECデザインに。
+                                </p>
+                            </div>
+                            <div class="work-block">
+                                <h3>Role</h3>
+                                <p>構成・ビジュアルデザイン・画像制作</p>
+                            </div>
+                            <div class="work-block">
+                                <h3>Tools</h3>
+                                <p>Figma / Photoshop / Illustrator</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="work-preview">
+                        <div class="preview-scroll">
+                            <img src="assets/work-04.webp" alt="ECモールデザイン EXCEEDS GII 全体デザイン" loading="lazy">
+                        </div>
+                    </div>
+                </div>
+            </article>
+
+            <article id="work-05" class="work">
+                <div class="work-inner">
+                    <div class="work-info">
+                        <header class="work-header">
+                            <span class="work-num">05 WORK</span>
                             <h2 class="work-title">アプリ UI改修</h2>
                         </header>
 
@@ -147,28 +180,28 @@
                     </div>
 
                     <div class="work-preview is-mockup">
-                        <img src="assets/work-04.webp" alt="アプリ UI改修 iPad・iPhone画面" loading="lazy">
+                        <img src="assets/work-05.webp" alt="アプリ UI改修 iPad・iPhone画面" loading="lazy">
                     </div>
                 </div>
             </article>
 
-            <article id="work-05" class="work">
+            <article id="work-06" class="work">
                 <div class="work-inner">
                     <div class="work-info">
                         <header class="work-header">
-                            <span class="work-num">05 WORK</span>
+                            <span class="work-num">06 WORK</span>
                             <h2 class="work-title">プロモーション・広告動画制作</h2>
                         </header>
 
                         <div class="work-details">
                             <div class="work-block">
                                 <h3>Concept</h3>
-                                <p>3DCGを活用した臨場感あふれるプロモーション動画の制作から、CVR向上を意識したGoogle動画広告のデザインまでを担当。商品の世界観を直感的に伝えつつ、ユーザーの心を動かすクリエイティブを設計。
+                                <p>3DCGを活用したプロモーション動画の制作から、CVR向上を意識したGoogle動画広告のデザインまでを担当。商品の世界観を直感的に伝えつつ、ユーザーの心を動かすクリエイティブを設計。
                                 </p>
                             </div>
                             <div class="work-block">
                                 <h3>Role</h3>
-                                <p>構成・3DCG制作・動画編集・モーショングラフィックス</p>
+                                <p>構成・3DCG制作・動画編集</p>
                             </div>
                             <div class="work-block">
                                 <h3>Tools</h3>
@@ -247,7 +280,7 @@
             if (!cards.length) return;
 
             const getStickyTopPx = () => {
-                const mq = window.matchMedia("(max-width: 959px)").matches;
+                const mq = window.matchMedia("(max-width: 768px)").matches;
                 const vhRatio = mq ? 0.10 : 0.13;
                 return window.innerHeight * vhRatio;
             };
@@ -256,7 +289,7 @@
 
             const updateCardsVisibility = () => {
                 const stickyTop = getStickyTopPx();
-                // スティッキー位置（top: 13dvh / 10dvh）に到達している一番後ろのカードを基準にする
+                // スティッキー位置に到達している一番後ろのカードを基準にする
                 let activeIndex = 0;
 
                 cards.forEach((card, index) => {

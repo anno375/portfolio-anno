@@ -157,8 +157,12 @@ a:hover {
     z-index: 5;
 }
 
-#about {
+#work-06 {
     z-index: 6;
+}
+
+#about {
+    z-index: 7;
 }
 
 .work-inner {
@@ -237,7 +241,7 @@ a:hover {
     display: block;
 }
 
-/* モックアップ表示（03 / 04） */
+/* モックアップ表示（03 / 05） */
 .work-preview.is-mockup {
     background-color: transparent;
     display: flex;
@@ -245,7 +249,7 @@ a:hover {
     justify-content: center;
 }
 
-#work-04 .work-preview.is-mockup img {
+#work-05 .work-preview.is-mockup img {
     width: auto;
     height: auto;
     max-width: 100%;
@@ -254,7 +258,7 @@ a:hover {
     filter: drop-shadow(0 20px 35px rgba(0, 0, 0, 0.45));
 }
 
-/* 動画2本配置エリア（05） */
+/* 動画2本配置エリア（06） */
 .work-preview.is-video {
     background-color: transparent;
     display: flex;
@@ -445,8 +449,8 @@ a:hover {
         scroll-margin-top: 5dvh;
         width: 94vw;
         height: auto;
-        min-height: 90dvh;
-        padding: 20px;
+        min-height: 86dvh;
+        padding: 18px;
         overflow: visible;
     }
 
@@ -458,10 +462,10 @@ a:hover {
 
     .work-inner {
         flex-direction: column;
-        gap: 20px;
+        gap: 16px;
     }
 
-    /* テキストの内部スクロールを解除して全文表示 */
+    /* テキストの内部スクロールを解除して全文表示（行間・余白を少し詰める） */
     .work-info,
     .about-content {
         flex: none;
@@ -472,11 +476,41 @@ a:hover {
         padding-right: 0;
     }
 
+    /* 最初の 01 をさらに 2px 小さく */
+    #work-01 .work-num {
+        font-size: calc(clamp(2.2rem, 4vw, 4rem) - 4px);
+        margin-bottom: 8px;
+    }
+
+    /* 最初の 01 の下のタイトルを 2px 小さく */
+    #work-01 .work-title {
+        font-size: calc(clamp(1.15rem, 4.8vw, 1.45rem) - 2px);
+    }
+
+    .work-num {
+        margin-bottom: 8px;
+    }
+
     .work-title {
-        margin-bottom: 14px;
+        font-size: clamp(1.15rem, 4.8vw, 1.45rem);
+        line-height: 1.3;
+        margin-bottom: 12px;
     }
 
     .work-details {
+        gap: 10px;
+    }
+
+    .work-block h3 {
+        margin-bottom: 4px;
+    }
+
+    .work-block p,
+    .about-body {
+        line-height: 1.5;
+    }
+
+    .about-body {
         gap: 12px;
     }
 
@@ -490,8 +524,8 @@ a:hover {
     .work-preview {
         flex: none;
         width: 100%;
-        height: 45dvh;
-        min-height: 260px;
+        height: 40dvh;
+        min-height: 220px;
         overflow: hidden;
     }
 
