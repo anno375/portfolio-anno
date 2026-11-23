@@ -424,9 +424,9 @@ a:hover {
 }
 
 /* =========================
-   Responsive (<= 959px)
+   Responsive (<= 768px)
 ========================= */
-@media screen and (max-width: 959px) {
+@media screen and (max-width: 768px) {
     .header {
         width: 94vw;
         height: 54px;
@@ -478,6 +478,12 @@ a:hover {
 
     .work-details {
         gap: 12px;
+    }
+
+    /* モバイルでは Tools ブロックを非表示 */
+    .work-block.is-tools,
+    .work-block:nth-child(3) {
+        display: none;
     }
 
     /* 画像プレビューは領域内でスクロールできるよう高さを確保 */
