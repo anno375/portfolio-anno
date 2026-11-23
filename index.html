@@ -1,292 +1,304 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ja">
 
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>anno-portfolio</title>
-    <mata name="description" content="阿武未奈子のportfolio">
-        <link rel="stylesheet" href="./sanitize.css">
-        <link rel="stylesheet" href="./style.css">
-        <link href="https://fonts.googleapis.com/css?family=Anton" rel="stylesheet">
+    <meta name="description" content="阿武未奈子のポートフォリオ">
+    <link rel="stylesheet" href="./sanitize.css">
+    <link rel="stylesheet" href="./style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Anton&display=swap" rel="stylesheet">
 </head>
 
 <body class="all">
     <div id="hero" class="hero">
-        <video class="video" autoplay loop muted preload>
-            <source src="assets/background_video.mp4" type="video/mp4" class="background-video" />
+        <video class="video" autoplay loop muted playsinline preload="metadata">
+            <source src="./assets/background_video.mp4" type="video/mp4">
         </video>
     </div>
 
     <header class="header">
-        <ul class="h-list">
-            <li class="h-work"><a href="#work" class="work-link">01 WORK</a></li>
-            <li class="h-about"><a href="#about" class="about-link">02 ABOUT</a></li>
-        </ul>
+        <nav aria-label="メインナビゲーション">
+            <ul class="h-list">
+                <li class="h-work"><a href="#work-01" class="work-link">01 WORK</a></li>
+                <li class="h-about"><a href="#about" class="about-link">02 ABOUT</a></li>
+            </ul>
         </nav>
     </header>
 
-    <section class="item">
+    <main class="item">
+        <div class="stack-container">
+            <article id="work-01" class="work">
+                <div class="work-inner">
+                    <div class="work-info">
+                        <header class="work-header">
+                            <span class="work-num">01 WORK</span>
+                            <h2 class="work-title">プロモーションLP</h2>
+                        </header>
 
-        <section id="work-01" class="work">
-
-            <div class="work-inner">
-                <div class="work-info">
-                    <div class="work-header">
-                        <span class="work-num">01 WORK</span>
-                        <h2 class="work-title">プロモーションLP</h2>
-                    </div>
-
-                    <div class="work-details">
-                        <div class="work-block">
-                            <h3>Concept</h3>
-                            <p>「情報量が多く離脱されやすい」という課題に対し、動きのあるレイアウトと視覚的な強弱でストレスのない導線を設計。AI生成による臨場感あるビジュアルで、製品の高級感と使用感を直感的に伝達
-                            </p>
-                        </div>
-
-                        <div class="work-block">
-                            <h3>Role</h3>
-                            <p>構成・デザイン・AI画像生成・コーディング<br>（コピー以外を一貫して担当）</p>
-                        </div>
-
-                        <div class="work-block">
-                            <h3>Tools</h3>
-                            <p>Figma / Photoshop / Illustrator / AI画像生成 /<br>HTML / CSS / JS</p>
+                        <div class="work-details">
+                            <div class="work-block">
+                                <h3>Concept</h3>
+                                <p>「情報量が多く離脱されやすい」という課題に対し、動きのあるレイアウトと視覚的な強弱でストレスのない導線を設計。AI生成による臨場感あるビジュアルで、製品の高級感と使用感を直感的に伝達。
+                                </p>
+                            </div>
+                            <div class="work-block">
+                                <h3>Role</h3>
+                                <p>構成・デザイン・AI画像生成・コーディング<br>（コピー以外を一貫して担当）</p>
+                            </div>
+                            <div class="work-block">
+                                <h3>Tools</h3>
+                                <p>Figma / Photoshop / Illustrator / AI画像生成 /<br>HTML / CSS / JS</p>
+                            </div>
                         </div>
                     </div>
 
-                </div>
-
-                <!-- 右側：クリックでモーダルが開くプレビューエリア -->
-                <div class="work-preview">
-                    <div class="preview-scroll">
-                        <img src="assets/work-01.webp" alt="プロモーションLP 全体デザイン" class="js-modal-trigger">
+                    <div class="work-preview">
+                        <div class="preview-scroll">
+                            <img src="assets/work-01.webp" alt="プロモーションLP 全体デザイン" loading="lazy">
+                        </div>
                     </div>
                 </div>
-            </div>
-        </section>
+            </article>
 
-        <!-- 拡大表示用モーダル（ページ内に1つだけ配置） -->
-        <div id="imageModal" class="modal" aria-hidden="true">
-            <button type="button" class="modal-close" aria-label="閉じる">&times;</button>
-            <div class="modal-content">
-                <img id="modalImage" src="" alt="拡大プレビュー">
-            </div>
+            <article id="work-02" class="work">
+                <div class="work-inner">
+                    <div class="work-info">
+                        <header class="work-header">
+                            <span class="work-num">02 WORK</span>
+                            <h2 class="work-title">運用型広告バナー制作</h2>
+                        </header>
+
+                        <div class="work-details">
+                            <div class="work-block">
+                                <h3>Concept</h3>
+                                <p>新規ユーザーの興味を瞬時に惹きつけるため、キャンペーンのインパクト重視から世界観を伝えるデザインまで、訴求軸に応じた視覚表現を設計。AI画像生成でバリエーションを展開し、徹底したABテストにより売上を最大4倍、ROASを最大1,600%達成。
+                                </p>
+                            </div>
+                            <div class="work-block">
+                                <h3>Role</h3>
+                                <p>デザイン・レイアウト構成・AI画像生成</p>
+                            </div>
+                            <div class="work-block">
+                                <h3>Tools</h3>
+                                <p>Figma / Illustrator / Photoshop / AI画像生成</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="work-preview">
+                        <div class="preview-scroll">
+                            <img src="assets/work-02.webp" alt="運用型広告バナー制作 デザイン一覧" loading="lazy">
+                        </div>
+                    </div>
+                </div>
+            </article>
+
+            <article id="work-03" class="work">
+                <div class="work-inner">
+                    <div class="work-info">
+                        <header class="work-header">
+                            <span class="work-num">03 WORK</span>
+                            <h2 class="work-title">LINEミニアプリUI</h2>
+                        </header>
+
+                        <div class="work-details">
+                            <div class="work-block">
+                                <h3>Concept</h3>
+                                <p>「専門用語が多く、契約内容や発電状況を把握しづらい」という課題に対し、親しみやすいフラットイラストと直感的なアイコン設計で情報の視認性を向上。LINE上で迷わずアクセスできるストレスフリーなUIを構築し、ユーザー自身がいつでも安心して契約状況を確認できる体験を設計。
+                                </p>
+                            </div>
+                            <div class="work-block">
+                                <h3>Role</h3>
+                                <p>UI/UXデザイン・レイアウト構成・パーツ設計</p>
+                            </div>
+                            <div class="work-block">
+                                <h3>Tools</h3>
+                                <p>Figma / Illustrator</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="work-preview is-mockup">
+                        <div class="preview-scroll">
+                            <img src="assets/work-03.webp" alt="LINEミニアプリUI 画面デザイン" loading="lazy">
+                        </div>
+                    </div>
+                </div>
+            </article>
+
+            <article id="work-04" class="work">
+                <div class="work-inner">
+                    <div class="work-info">
+                        <header class="work-header">
+                            <span class="work-num">04 WORK</span>
+                            <h2 class="work-title">アプリ UI改修</h2>
+                        </header>
+
+                        <div class="work-details">
+                            <div class="work-block">
+                                <h3>Concept</h3>
+                                <p>プレイ中の視認性と直感的な操作性を高め、快適なラウンド体験を実現するUIブラッシュアップ。複雑になりがちな計測・コース情報を整理し、屋外での瞬時の判断をサポートするストレスフリーな画面設計を追求。
+                                </p>
+                            </div>
+                            <div class="work-block">
+                                <h3>Role</h3>
+                                <p>UI/UXデザイン・レイアウト構成・パーツ設計</p>
+                            </div>
+                            <div class="work-block">
+                                <h3>Tools</h3>
+                                <p>Figma / Illustrator</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="work-preview is-mockup">
+                        <img src="assets/work-04.webp" alt="アプリ UI改修 iPad・iPhone画面" loading="lazy">
+                    </div>
+                </div>
+            </article>
+
+            <article id="work-05" class="work">
+                <div class="work-inner">
+                    <div class="work-info">
+                        <header class="work-header">
+                            <span class="work-num">05 WORK</span>
+                            <h2 class="work-title">プロモーション・広告動画制作</h2>
+                        </header>
+
+                        <div class="work-details">
+                            <div class="work-block">
+                                <h3>Concept</h3>
+                                <p>3DCGを活用した臨場感あふれるプロモーション動画の制作から、CVR向上を意識したGoogle動画広告のデザインまでを担当。商品の世界観を直感的に伝えつつ、ユーザーの心を動かすクリエイティブを設計。
+                                </p>
+                            </div>
+                            <div class="work-block">
+                                <h3>Role</h3>
+                                <p>構成・3DCG制作・動画編集・モーショングラフィックス</p>
+                            </div>
+                            <div class="work-block">
+                                <h3>Tools</h3>
+                                <p>Blender / After Effects / Premiere Pro / Illustrator</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="work-preview is-video">
+                        <div class="video-list">
+                            <div class="video-item video-16-9">
+                                <video src="assets/video-01.mp4" muted controls playsinline preload="metadata"></video>
+                            </div>
+                            <div class="video-item video-custom">
+                                <video src="assets/video-02.mp4" muted controls playsinline preload="metadata"></video>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </article>
+
+            <section id="about" class="about" aria-labelledby="about-heading">
+                <div class="about-card">
+                    <div class="about-inner">
+                        <div class="about-content">
+                            <header class="about-header">
+                                <span class="about-num">02 ABOUT</span>
+                            </header>
+
+                            <div class="profile-intro">
+                                <h2 id="about-heading" class="about-name">
+                                    Anno Minako <span class="about-name-jp">阿武(源田) 未奈子</span>
+                                </h2>
+                                <p class="about-birth">1996.5.22 生まれ</p>
+                            </div>
+
+                            <div class="about-body">
+                                <div class="about-block">
+                                    <h3 class="about-heading">経歴とキャリアの変化</h3>
+                                    <p>新卒で約5年間、ベンチャー企業にてファッションデザイナーや生産マネージャーを経験。ものづくりに携わる中で、よりデータや数値成果に直結し、市場のスピード感に対応できる領域への希望が強くなり、Web業界へ転身。
+                                    </p>
+                                    <p>現在はゴルフナビメーカーにて、Web・EC・アプリ・グラフィック領域全般のデザインおよび制作を担当。副業でアプリデザインも行っている。</p>
+                                </div>
+
+                                <div class="about-block">
+                                    <h3 class="about-heading">強み・実績</h3>
+                                    <p>大まかなコンセプト共有から、構成案の作成・デザイン・コーディング・動画編集まで単独で完結できる対応力が強み。見た目の美しさだけでなく売上やROASなどの数値成果を意識し、参画後は担当広告バナーの売上を最低2倍〜最高4倍、直近ROAS
+                                        1,600%を達成。</p>
+                                </div>
+
+                                <div class="about-block hobbys">
+                                    <h3 class="about-heading">得意・好きなこと</h3>
+                                    <p>新しい領域へのキャッチアップが得意で、動画編集や3D（Blender）などを自学で習得し業務に還元。趣味はスポーツ（野球・バスケ等）、お酒、銭湯巡り。オン・オフともにフットワークの軽さと柔軟性を大切にしています。
+                                    </p>
+                                </div>
+                            </div>
+
+                            <address class="about-contact">
+                                <a href="mailto:anchan8522@gmail.com" class="contact-link">
+                                    <span class="contact-label">MAIL</span> anchan8522@gmail.com
+                                </a>
+                                <a href="tel:09094732258" class="contact-link">
+                                    <span class="contact-label">TEL</span> 090-9473-2258
+                                </a>
+                            </address>
+                        </div>
+                    </div>
+                </div>
+            </section>
         </div>
+    </main>
 
+    <script>
+        (() => {
+            const cards = Array.from(document.querySelectorAll(".stack-container > .work, .stack-container > .about"));
+            if (!cards.length) return;
 
-        <!-- 2枚目：運用型広告バナー制作 -->
-        <section id="work-02" class="work">
-            <div class="work-inner">
-                <!-- 左側：テキストエリア -->
-                <div class="work-info">
-                    <div class="work-header">
-                        <span class="work-num">02 WORK</span>
-                        <h2 class="work-title">運用型広告バナー制作</h2>
-                    </div>
+            const getStickyTopPx = () => {
+                const mq = window.matchMedia("(max-width: 959px)").matches;
+                const vhRatio = mq ? 0.10 : 0.13;
+                return window.innerHeight * vhRatio;
+            };
 
-                    <div class="work-details">
-                        <div class="work-block">
-                            <h3>Concept</h3>
-                            <p>新規ユーザーの興味を瞬時に惹きつけるため、キャンペーンのインパクト重視から世界観を伝えるデザインまで、訴求軸に応じた視覚表現を設計。AI画像生成でバリエーションを展開し、徹底したABテストにより売上を最大4倍、ROASを最大1,600%達成
-                            </p>
-                        </div>
+            let ticking = false;
 
-                        <div class="work-block">
-                            <h3>Role</h3>
-                            <p>デザイン・レイアウト構成・AI画像生成</p>
-                        </div>
+            const updateCardsVisibility = () => {
+                const stickyTop = getStickyTopPx();
+                // スティッキー位置（top: 13dvh / 10dvh）に到達している一番後ろのカードを基準にする
+                let activeIndex = 0;
 
-                        <div class="work-block">
-                            <h3>Tools</h3>
-                            <p>Figma / Illustrator / Photoshop / AI画像生成</p>
-                        </div>
-                    </div>
-                </div>
+                cards.forEach((card, index) => {
+                    const rect = card.getBoundingClientRect();
+                    if (rect.top <= stickyTop + 4) {
+                        activeIndex = index;
+                    }
+                });
 
-                <div class="work-preview">
-                    <div class="preview-scroll">
-                        <!-- js-modal-trigger クラスをつけた画像がクリック対象になります -->
-                        <img src="assets/work-02.webp" alt="プロモーションLP 全体デザイン" class="js-modal-trigger">
-                    </div>
-                    <!-- <span class="zoom-hint">Click to expand</span> -->
-                </div>
-            </div>
-        </section>
+                cards.forEach((card, index) => {
+                    if (index <= activeIndex - 2) {
+                        card.classList.add("is-hidden-behind");
+                    } else {
+                        card.classList.remove("is-hidden-behind");
+                    }
+                });
 
+                ticking = false;
+            };
 
-        <!-- 3枚目：LINEミニアプリUI -->
-        <section id="work-03" class="work">
-            <div class="work-inner">
-                <!-- 左側：テキストエリア -->
-                <div class="work-info">
-                    <div class="work-header">
-                        <span class="work-num">03 WORK</span>
-                        <h2 class="work-title">LINEミニアプリUI</h2>
-                    </div>
+            const onScrollOrResize = () => {
+                if (!ticking) {
+                    window.requestAnimationFrame(updateCardsVisibility);
+                    ticking = true;
+                }
+            };
 
-                    <div class="work-details">
-                        <div class="work-block">
-                            <h3>Concept</h3>
-                            <p>「専門用語が多く、契約内容や発電状況を把握しづらい」という課題に対し、親しみやすいフラットイラストと直感的なアイコン設計で情報の視認性を向上。LINE上で迷わずアクセスできるストレスフリーなUIを構築し、ユーザー自身がいつでも安心して契約状況を確認できる体験を設計
-                            </p>
-                        </div>
+            window.addEventListener("scroll", onScrollOrResize, { passive: true });
+            window.addEventListener("resize", onScrollOrResize);
+            updateCardsVisibility();
+        })();
+    </script>
 
-                        <div class="work-block">
-                            <h3>Role</h3>
-                            <p>UI/UXデザイン・レイアウト構成・パーツ設計</p>
-                        </div>
-
-                        <div class="work-block">
-                            <h3>Tools</h3>
-                            <p>Figma / Illustrator</p>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- 右側：背景透明のまま縦スクロールできるモックアップエリア -->
-                <div class="work-preview is-mockup">
-                    <div class="preview-scroll">
-                        <img src="assets/work-03.webp" alt="LINEミニアプリUI 画面デザイン" class="js-modal-trigger">
-                    </div>
-                    <!-- <span class="zoom-hint">Click to expand</span> -->
-                </div>
-            </div>
-        </section>
-
-        <section id="work-04" class="work">
-            <div class="work-inner">
-                <!-- 左側：テキストエリア -->
-                <div class="work-info">
-                    <div class="work-header">
-                        <span class="work-num">04 WORK</span>
-                        <h2 class="work-title">アプリ UI改修</h2>
-                    </div>
-
-                    <div class="work-details">
-                        <div class="work-block">
-                            <h3>Concept</h3>
-                            <p>プレイ中の視認性と直感的な操作性を高め、快適なラウンド体験を実現するUIブラッシュアップ。複雑になりがちな計測・コース情報を整理し、屋外での瞬時の判断をサポートするストレスフリーな画面設計を追求
-                            </p>
-                        </div>
-
-                        <div class="work-block">
-                            <h3>Role</h3>
-                            <p>UI/UXデザイン・レイアウト構成・パーツ設計</p>
-                        </div>
-
-                        <div class="work-block">
-                            <h3>Tools</h3>
-                            <p>Figma / Illustrator</p>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- 右側：モックアップ表示エリア（is-mockup クラスを付与） -->
-                <div class="work-preview is-mockup">
-                    <img src="assets/work-04.webp" alt="アプリ UI改修 iPad・iPhone画面" class="js-modal-trigger">
-                    <!-- <span class="zoom-hint">Click to expand</span> -->
-                </div>
-            </div>
-        </section>
-
-        <!-- 5枚目：プロモーション動画・広告動画制作 -->
-        <section id="work-05" class="work">
-            <div class="work-inner">
-                <!-- 左側：テキストエリア -->
-                <div class="work-info">
-                    <div class="work-header">
-                        <span class="work-num">05 WORK</span>
-                        <h2 class="work-title">プロモーション・広告動画制作</h2>
-                    </div>
-
-                    <div class="work-details">
-                        <div class="work-block">
-                            <h3>Concept</h3>
-                            <p>3DCGを活用した臨場感あふれるプロモーション動画の制作から、CVR向上を意識したGoogle動画広告のデザインまでを担当。商品の世界観を直感的に伝えつつ、ユーザーの心を動かすクリエイティブを設計
-                            </p>
-                        </div>
-
-                        <div class="work-block">
-                            <h3>Role</h3>
-                            <p>構成・3DCG制作・動画編集・モーショングラフィックス</p>
-                        </div>
-
-                        <div class="work-block">
-                            <h3>Tools</h3>
-                            <p>Blender / After Effects / Premiere Pro / Illustrator</p>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- 右側：動画2本配置エリア -->
-                <div class="work-preview is-video">
-                    <div class="video-list">
-                        <!-- 1本目 (16:9) -->
-                        <div class="video-item video-16-9">
-                            <video src="assets/video-01.mp4" muted controls playsinline preload="metadata"></video>
-                        </div>
-                        <!-- 2本目 (2132x1200用) -->
-                        <div class="video-item video-custom">
-                            <video src="assets/video-02.mp4" muted controls playsinline preload="metadata"></video>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <section id="about" class="about">
-            <div class="about-card">
-                <div class="about-inner">
-
-                    <div class="about-content">
-                        <div class="about-header">
-                            <span class="about-num">02 ABOUT</span>
-                        </div>
-
-                        <div class="profile-intro">
-                            <h3 class="about-name">Anno Minako <span class="about-name-jp">阿武(源田) 未奈子</span></h3>
-                            <p class="about-birth">1996.5.22 生まれ</p>
-                        </div>
-
-                        <div class="about-body">
-                            <div class="about-block">
-                                <h4 class="about-heading">経歴とキャリアの変化</h4>
-                                <p>新卒で約5年間、ベンチャー企業にてファッションデザイナーや生産マネージャーを経験。ものづくりに携わる中で、よりデータや数値成果に直結し、市場のスピード感に対応できる領域への希望が強くなり、Web業界へ転身。
-                                </p>
-                                <p>現在はゴルフナビメーカーにて、Web・EC・アプリ・グラフィック領域全般のデザインおよび制作を担当。副業でアプリデザインも行っている。</p>
-                            </div>
-
-                            <div class="about-block">
-                                <h4 class="about-heading">強み・実績</h4>
-                                <p>大まかなコンセプト共有から、構成案の作成・デザイン・コーディング・動画編集まで単独で完結できる対応力が強み。見た目の美しさだけでなく売上やROASなどの数値成果を意識し、参画後は担当広告バナーの売上を最低2倍〜最高4倍、直近ROAS
-                                    1,600%を達成。</p>
-                            </div>
-
-
-                            <div class="about-block hobbys">
-                                <span class="label">得意・好きなこと:</span>
-                                <p>新しい領域へのキャッチアップが得意で、動画編集や3D（Blender）などを自学で習得し業務に還元。趣味はスポーツ（野球・バスケ等）、お酒、銭湯巡り。オン・オフともにフットワークの軽さと柔軟性を大切にしています。
-                                </p>
-                            </div>
-                        </div>
-
-                        <!-- 連絡先 -->
-                        <div class="about-contact">
-                            <a href="mailto:anchan8522@gmail.com" class="contact-link">
-                                <span class="contact-label">MAIL</span> anchan8522@gmail.com
-                            </a>
-                            <a href="tel:09094732258" class="contact-link">
-                                <span class="contact-label">TEL</span> 090-9473-2258
-                            </a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <section class="item-bottom-padding"></section>
-    </section>
 </body>
 
 </html>
